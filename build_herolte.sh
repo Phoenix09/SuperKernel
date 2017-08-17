@@ -1,11 +1,11 @@
 #!/bin/bash
 # kernel build script by Tkkg1994 v0.4 (optimized from apq8084 kernel source)
 
-export MODEL=herolte
+export MODEL=hero2lte
 export ARCH=arm64
 export VERSION=V1.6.5
-export BUILD_CROSS_COMPILE=../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.3.0/bin/aarch64-cortex_a53-linux-gnueabi-
-export BUILD_JOB_NUMBER=`grep processor /proc/cpuinfo|wc -l`
+export BUILD_CROSS_COMPILE=/opt/aarch64-cortex_a53-linux-gnueabi-6.3.0/bin/aarch64-cortex_a53-linux-gnueabi-
+export BUILD_JOB_NUMBER=`nproc`
 
 RDIR=$(pwd)
 OUTDIR=$RDIR/arch/$ARCH/boot
