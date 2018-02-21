@@ -4,9 +4,9 @@
 export MODEL=hero2lte
 export VARIANT=eur
 export ARCH=arm64
-export VERSION=V2.10.5
+export VERSION=V2.11.0
 export BUILD_CROSS_COMPILE=~/s7/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-
-export BUILD_JOB_NUMBER=`nproc`
+export BUILD_JOB_NUMBER=`grep processor /proc/cpuinfo|wc -l`
 
 RDIR=$(pwd)
 OUTDIR=$RDIR/arch/$ARCH/boot
