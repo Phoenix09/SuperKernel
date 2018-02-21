@@ -5,7 +5,7 @@ export MODEL=hero2lte
 export VARIANT=eur
 export ARCH=arm64
 export VERSION=V2.10.5
-export BUILD_CROSS_COMPILE=/opt/toolchains/arm64/aarch64-cortex_a53-linux-gnueabi-6.3.0/bin/aarch64-cortex_a53-linux-gnueabi-
+export BUILD_CROSS_COMPILE=~/s7/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-
 export BUILD_JOB_NUMBER=`nproc`
 
 RDIR=$(pwd)
