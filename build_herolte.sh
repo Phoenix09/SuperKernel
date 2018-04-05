@@ -321,6 +321,18 @@ FUNC_BUILD_ZIP()
 		exit 1
 		;;
 	esac
+
+	(
+		cd "$RDIR/build"
+
+		# for some strange reason images packed by repackimg.sh
+		# on my server no longer boot
+		mkboot "$MODEL-$VARIANT.img" boot
+		mkboot boot "$MODEL-$VARIANT.img"
+		rm -rf boot
+
+		zip -r "../SuperStock_Kernel_${VERSION,,}-Kali.zip" -- *
+	)
 }
 
 # MAIN FUNCTION
